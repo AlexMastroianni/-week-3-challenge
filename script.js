@@ -89,10 +89,10 @@ function generatePassword() {
     return;
   }
   //Asking the users to configure there password
-  var userLowercase = window.confirm("Would you like Lowercase ");
-  var userUppercase = window.confirm("Would you like Uppercase ");
-  var userNumber = window.confirm("Would you like Numbers");
-  var specialCharacters = window.confirm("Would you like special Characters");
+  var userLowercase = window.confirm("Would you like lowercase letters?");
+  var userUppercase = window.confirm("Would you like uppercase letters? ");
+  var userNumber = window.confirm("Would you like numbers?");
+  var specialCharacters = window.confirm("Would you like special characters? ");
 
   // A placeholder for all users answers
   var userSelection = [];
@@ -113,17 +113,23 @@ function generatePassword() {
     userSelection.push(numbers);
   }
 
-  console.log(userSelection);
-
   var password = [];
 
   for (var i = 0; i < passwordLength; i++) {
-    var userChoice =
+    var userPassword =
       userSelection[Math.floor(Math.random() * userSelection.length)];
-    password.push(userChoice);
-
-    window.alert(password);
+    userPassword.push(password);
   }
+  window.alert(password);
+
+  console.log("User lowercase:" + userLowercase);
+  console.log("User Uppercase:" + userUppercase);
+  console.log("User Numbers:" + userNumber);
+  console.log("User SC:" + specialCharacters);
+  console.log("User password:" + password);
+  console.log("User userPassword:" + userPassword);
+  console.log("User userSelection:" + userSelection);
+  console.log("User passwordLength:" + passwordLength);
 }
 
 // Write password to the #password input
