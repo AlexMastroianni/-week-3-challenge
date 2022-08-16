@@ -97,7 +97,7 @@ function generatePassword() {
   // A placeholder for all users answers
   var userSelection = [];
 
-  //if statements colleting the window.confirm user inputs and ... flattens the selected arrays
+  //if statements colleting the window.confirm user inputs and ...  spread operator flattens the selected arrays
   if (userLowercase === true) {
     userSelection.push(...lowercaseLetters);
   }
