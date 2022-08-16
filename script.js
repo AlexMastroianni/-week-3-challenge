@@ -88,7 +88,7 @@ function generatePassword() {
     window.alert("This is Invalid");
     return;
   }
-  //Asking the users to configure there password
+  //Asking the users to configure there password variables
   var userLowercase = window.confirm("Would you like lowercase letters?");
   var userUppercase = window.confirm("Would you like uppercase letters? ");
   var userNumber = window.confirm("Would you like numbers?");
@@ -97,35 +97,35 @@ function generatePassword() {
   // A placeholder for all users answers
   var userSelection = [];
 
-  //if statements colleting the window.confirm user inputs
+  //if statements colleting the window.confirm user inputs and ... flattens the selected arrays
   if (userLowercase === true) {
-    userSelection.push(lowercaseLetters);
+    userSelection.push(...lowercaseLetters);
   }
 
   if (userUppercase === true) {
-    userSelection.push(uppercaseLetters);
+    userSelection.push(...uppercaseLetters);
   }
 
   if (specialCharacters === true) {
-    userSelection.push(specialLetters);
+    userSelection.push(...specialLetters);
   }
 
   if (userNumber === true) {
-    userSelection.push(numbers);
+    userSelection.push(...numbers);
   }
 
   // Holding the final generated password
   var password = [];
 
-  //for loop to select random numbers  throught the selected arrarys
+  //for loop to select random numbers  through the selected arrarys which have been flattened.
   for (var i = 0; i < passwordLength; i++) {
     var userPassword =
       userSelection[Math.floor(Math.random() * userSelection.length)];
-    userPassword.push(password);
+    password.push(userPassword);
   }
 
   // Printing out the final result
-  window.alert(password);
+  // window.alert(password.join(""));
 
   // printing all the vars for testing
   console.log("User lowercase:" + userLowercase);
@@ -133,10 +133,11 @@ function generatePassword() {
   console.log("User Numbers:" + userNumber);
   console.log("User SC:" + specialCharacters);
   console.log("User password:" + password);
-  console.log("User userPassword:" + userPassword);
   console.log("User userSelection:" + userSelection);
   console.log("User passwordLength:" + passwordLength);
   console.log("UserInput:" + userInput);
+  return password.join("");
+  //Return to output to the function
 }
 
 // Write password to the #password input
