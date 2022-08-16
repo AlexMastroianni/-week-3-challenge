@@ -97,6 +97,7 @@ function generatePassword() {
   // A placeholder for all users answers
   var userSelection = [];
 
+  //if statements colleting the window.confirm user inputs
   if (userLowercase === true) {
     userSelection.push(lowercaseLetters);
   }
@@ -113,15 +114,20 @@ function generatePassword() {
     userSelection.push(numbers);
   }
 
+  // Holding the final generated password
   var password = [];
 
+  //for loop to select random numbers  throught the selected arrarys
   for (var i = 0; i < passwordLength; i++) {
     var userPassword =
       userSelection[Math.floor(Math.random() * userSelection.length)];
     userPassword.push(password);
   }
+
+  // Printing out the final result
   window.alert(password);
 
+  // printing all the vars for testing
   console.log("User lowercase:" + userLowercase);
   console.log("User Uppercase:" + userUppercase);
   console.log("User Numbers:" + userNumber);
@@ -130,6 +136,7 @@ function generatePassword() {
   console.log("User userPassword:" + userPassword);
   console.log("User userSelection:" + userSelection);
   console.log("User passwordLength:" + passwordLength);
+  console.log("UserInput:" + userInput);
 }
 
 // Write password to the #password input
