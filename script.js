@@ -124,10 +124,7 @@ function generatePassword() {
     password.push(userPassword);
   }
 
-  // Printing out the final result
-  // window.alert(password.join(""));
-
-  // printing all the vars for testing
+  // printing all the vars for for testing and bug fixes
   console.log("User lowercase:" + userLowercase);
   console.log("User Uppercase:" + userUppercase);
   console.log("User Numbers:" + userNumber);
