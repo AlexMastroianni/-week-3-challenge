@@ -24,6 +24,6 @@ Then it will output a random password
 <img width="1728" alt="sceenshot_3" src="https://user-images.githubusercontent.com/107826386/185339727-2e9923c7-fb6a-4fc6-8984-5798cec44017.png">
 
 ### Links
-[Github Repo](www.google.com)
+[Github Repo](https://github.com/AlexMastroianni/-week-3-challenge)
 
-[Live Site](www.google.com)
+[Live Site](https://alexmastroianni.github.io/week-3-challenge/)
