@@ -1,4 +1,4 @@
-# -week-3-challenge
+# Simple JS Password Generator
 Javascript Password Generator
  
 # Task 
